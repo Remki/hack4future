@@ -33,8 +33,8 @@ extension ViewController: ARSessionDelegate {
         ]
         
         // Use `flatMap(_:)` to remove optional error messages.
-        let errorMessage = messages.compactMap({ $0 }).joined(separator: "\n")
-        
+//        let errorMessage = messages.compactMap({ $0 }).joined(separator: "\n")
+
         DispatchQueue.main.async {
             self.displayErrorMessage(title: "The AR session failed.", message: errorMessage)
         }

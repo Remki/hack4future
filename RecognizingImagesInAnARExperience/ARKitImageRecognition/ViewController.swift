@@ -68,10 +68,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     /// - Tag: ARReferenceImage-Loading
 	func resetTracking() {
         
-        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
-            fatalError("Missing expected asset catalog resources.")
-        }
-        
+//        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
+//            fatalError("Missing expected asset catalog resources.")
+//        }
+
         let configuration = ARWorldTrackingConfiguration()
         configuration.detectionImages = referenceImages
         session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
